@@ -1,0 +1,6 @@
+format: jb-book
+root: accueil
+chapters:
+- file: introduction
+- file: textes
+- file: etat_plateforme
