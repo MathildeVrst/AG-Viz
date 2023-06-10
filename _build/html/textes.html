@@ -315,22 +315,6 @@ document.write(`
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">glom</span> <span class="kn">import</span> <span class="n">glom</span> <span class="c1"># allows to use . notation to access property from a deeply nested object.</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Import des librairies nécessaires&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">glom</span> <span class="kn">import</span> <span class="n">glom</span> <span class="c1"># allows to use . notation to access property from a deeply nested object.</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Import des librairies nécessaires&quot;</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;glom&#39;
 </pre></div>
 </div>
 </div>
@@ -346,29 +330,29 @@ document.write(`
 <p>Le dump de l’API est désormais contenu dans la variable <code class="docutils literal notranslate"><span class="pre">data</span></code>. Ses données se structurent comme suit :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;id&#39;: 424,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;id&#39;: 438,
  &#39;book&#39;: {&#39;url&#39;: &#39;https://anthologiagraeca.org/api/books/9/&#39;, &#39;number&#39;: 1},
- &#39;fragment&#39;: 1,
+ &#39;fragment&#39;: 2,
  &#39;sub_fragment&#39;: &#39;&#39;,
- &#39;url&#39;: &#39;https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:1.1/&#39;,
- &#39;manuscripts&#39;: [&#39;http://digi.ub.uni-heidelberg.de/iiif/2/cpgraec23%3A049.jpg/pct:11.132686084142394,13.202832153269469,60.129449838187696,6.205747605164515/full/0/default.jpg&#39;],
- &#39;texts&#39;: [{&#39;url&#39;: &#39;https://anthologiagraeca.org/api/texts/1581/&#39;,
+ &#39;url&#39;: &#39;https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:1.2/&#39;,
+ &#39;manuscripts&#39;: [&#39;http://digi.ub.uni-heidelberg.de/iiif/2/cpgraec23%3A049.jpg/pct:12.466722876141418,19.26407429979108,58.60226718012693,8.23287268450456/full/0/default.jpg&#39;],
+ &#39;texts&#39;: [{&#39;url&#39;: &#39;https://anthologiagraeca.org/api/texts/1627/&#39;,
    &#39;language&#39;: &#39;grc&#39;,
-   &#39;text&#39;: &#39;\n                      ἃς οἱ πλάνοι καθεῖλον ἐνθάδ᾽ εἰκόνας\n ἄνακτες ἐστήλωσαν εὐσεβεῖς πάλιν.\n&#39;},
-  {&#39;url&#39;: &#39;https://anthologiagraeca.org/api/texts/1582/&#39;,
+   &#39;text&#39;: &#39;\n                      θεῖος Ἰουστῖνος, Σοφίης πόσις, ᾧ πόρε Χριστὸς\n πάντα διορθοῦσθαι, καὶ κλέος ἐν πολέμοις,\nμητρὸς ἀπειρογάμοιο δόμον σκάζοντα νοήσας,\n σαθρὸν ἀποσκεδάσας τεῦξέ μιν ἀσφαλέως.\n&#39;},
+  {&#39;url&#39;: &#39;https://anthologiagraeca.org/api/texts/1628/&#39;,
    &#39;language&#39;: &#39;eng&#39;,
-   &#39;text&#39;: &#39;Inscribed on the Tabernacle of Saint Sophia\n\nThe images that the hereties took down here our pious sovereigns replaced. &#39;},
-  {&#39;url&#39;: &#39;https://anthologiagraeca.org/api/texts/1583/&#39;,
+   &#39;text&#39;: &#39;Inscribed on the Apse of Blachernae\n\nThe divine Justin, the husband of Sophia, to whom Christ granted the gift of restoring everything, and glory in war, finding that the temple of the Virgin Mother was tottering, took the decayed part to pieces and built it up again securely. &#39;},
+  {&#39;url&#39;: &#39;https://anthologiagraeca.org/api/texts/1629/&#39;,
    &#39;language&#39;: &#39;fra&#39;,
-   &#39;text&#39;: &quot;Sur le dais de l&#39;autel de Sainte-Sophie \n\nLes images que des égarés avaient renversées ici, de pieux souverains les ont relevées. &quot;},
-  {&#39;url&#39;: &#39;https://anthologiagraeca.org/api/texts/1584/&#39;,
+   &#39;text&#39;: &quot;Gravé sur les absides des Blachernes. \n\nLe divin Justin, l&#39;époux de Sophie, à qui le Christ a accordé le rétablissement universel de l&#39;ordre et la gloire dans les combats, voyant chanceler la demeure de la Mère immaculée, en a fait abattre les bâtiments qui tombaient en ruines et les a fait reconstruire solidement. &quot;},
+  {&#39;url&#39;: &#39;https://anthologiagraeca.org/api/texts/1630/&#39;,
    &#39;language&#39;: &#39;por&#39;,
-   &#39;text&#39;: &#39;Inscrito no altar de Santa Sofia\n \nDaqui os andarilhos derrubaram as imagens,\nEntão os pios senhores as ergueram novamente.&#39;}],
+   &#39;text&#39;: &#39;Na abóboda de Blaquerna\n\nO divino Justino, esposo de Sofia, a quem Cristo concedeu o dom de tudo restaurar e a glória em combates, percebendo estar combalida a casa da Mãe Imaculada, demoliu o danificado e reconstruiu solidamente. &#39;}],
  &#39;authors&#39;: [{&#39;url&#39;: &#39;https://anthologiagraeca.org/api/authors/6/&#39;,
    &#39;tlg_id&#39;: &#39;&#39;,
    &#39;names&#39;: [{&#39;name&#39;: &#39;anónimo&#39;, &#39;language&#39;: &#39;spa&#39;},
@@ -381,17 +365,18 @@ document.write(`
  &#39;keywords&#39;: [&#39;https://anthologiagraeca.org/api/keywords/116/&#39;,
   &#39;https://anthologiagraeca.org/api/keywords/200/&#39;],
  &#39;scholia&#39;: [{&#39;book&#39;: 1,
-   &#39;fragment&#39;: 1,
+   &#39;fragment&#39;: 2,
    &#39;sub_fragment&#39;: &#39;&#39;,
    &#39;number&#39;: 1,
-   &#39;url&#39;: &#39;https://anthologiagraeca.org/api/scholia/urn:cts:greekLit:tlg5011.tlg001.sag:1.1.1/&#39;},
+   &#39;url&#39;: &#39;https://anthologiagraeca.org/api/scholia/urn:cts:greekLit:tlg5011.tlg001.sag:1.2.1/&#39;},
   {&#39;book&#39;: 1,
-   &#39;fragment&#39;: 1,
+   &#39;fragment&#39;: 2,
    &#39;sub_fragment&#39;: &#39;&#39;,
    &#39;number&#39;: 2,
-   &#39;url&#39;: &#39;https://anthologiagraeca.org/api/scholia/urn:cts:greekLit:tlg5011.tlg001.sag:1.1.2/&#39;}],
- &#39;comments&#39;: [&#39;https://anthologiagraeca.org/api/comments/670/&#39;],
- &#39;external_references&#39;: [],
+   &#39;url&#39;: &#39;https://anthologiagraeca.org/api/scholia/urn:cts:greekLit:tlg5011.tlg001.sag:1.2.2/&#39;}],
+ &#39;comments&#39;: [],
+ &#39;external_references&#39;: [{&#39;title&#39;: &#39;Église Sainte-Marie des Blachernes&#39;,
+   &#39;url&#39;: &#39;https://fr.wikipedia.org/wiki/%C3%89glise_Sainte-Marie-des-Blachernes&#39;}],
  &#39;internal_references&#39;: [],
  &#39;media&#39;: []}
 </pre></div>
