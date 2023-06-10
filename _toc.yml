@@ -4,3 +4,5 @@ chapters:
 - file: introduction
 - file: textes
 - file: etat_plateforme
+- file: Seaborn
+- file: Bokeh
