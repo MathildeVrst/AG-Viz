@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'etat_plateforme';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="Seaborn.html" />
+    <link rel="next" title="Seaborn" href="Seaborn.html" />
     <link rel="prev" title="L’Anthologie comme recueil de textes" href="textes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -155,6 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="textes.html">L’<em>Anthologie</em> comme recueil de <em>textes</em></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">État de la plateforme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Seaborn.html">Seaborn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bokeh.html">Bokeh</a></li>
 </ul>
 
     </div>
@@ -319,7 +321,12 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="etat-de-la-plateforme">
 <h1>État de la plateforme<a class="headerlink" href="#etat-de-la-plateforme" title="Permalink to this heading">#</a></h1>
 <p>Il est important d’avoir un oeil sur l’évolution de l’édition générale de la plateforme. Pour ce faire, nous nous baserons essentiellement sur l’état des livres pour cela.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">requests</span>
@@ -332,14 +339,21 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dump_api.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> 
     <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <p>Ici, les données dont nous avons besoin sont un peu différentes. Affichons, toujours dans un dataframe :</p>
 <ul class="simple">
@@ -350,14 +364,25 @@ document.write(`
 <li><p>nombre de mots clés</p></li>
 <li><p>nombre de commentaires</p></li>
 </ul>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;epi_id&#39;</span><span class="p">,</span> <span class="s1">&#39;epi_url&#39;</span><span class="p">,</span> <span class="s1">&#39;livre&#39;</span><span class="p">,</span> <span class="s1">&#39;nbr_txts&#39;</span><span class="p">,</span> <span class="s1">&#39;nbr_kw&#39;</span><span class="p">,</span> <span class="s1">&#39;nbr_coms&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_list</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -380,13 +405,20 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -416,60 +448,66 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>2966</th>
-      <td>3044</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:11.166/</td>
+      <th>716</th>
+      <td>1451</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:6.249/</td>
+      <td>6</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2909</th>
+      <td>3493</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:11.109/</td>
       <td>11</td>
       <td>3</td>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>975</th>
-      <td>238</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:7.147/</td>
+      <th>1571</th>
+      <td>1031</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:7.736/</td>
       <td>7</td>
+      <td>5</td>
       <td>4</td>
-      <td>10</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>1124</th>
-      <td>586</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:7.295/</td>
-      <td>7</td>
-      <td>4</td>
-      <td>6</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3855</th>
-      <td>3780</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.111/</td>
+      <th>3882</th>
+      <td>3796</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.138/</td>
       <td>16</td>
       <td>1</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
-      <th>761</th>
-      <td>1768</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:6.294/</td>
-      <td>6</td>
-      <td>3</td>
+      <th>2118</th>
+      <td>2506</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:9.275/</td>
+      <td>9</td>
       <td>1</td>
       <td>0</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;count&#39;</span><span class="p">,</span><span class="s1">&#39;max&#39;</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -676,7 +714,12 @@ document.write(`
 </ul>
 <section id="textes">
 <h2>Textes<a class="headerlink" href="#textes" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;nbr_txts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
 
@@ -689,11 +732,17 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/b7b40a25e2bad99bb7dca3024ee1851b3633e4671a35c45a6630863b50e782b9.png" src="_images/b7b40a25e2bad99bb7dca3024ee1851b3633e4671a35c45a6630863b50e782b9.png" />
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;nbr_txts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 
@@ -721,11 +770,17 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/dbdcd52cdc6cd7ca2239b378d1df48db8a56f6d6dd9c09c2c4b847c2bb141044.png" src="_images/dbdcd52cdc6cd7ca2239b378d1df48db8a56f6d6dd9c09c2c4b847c2bb141044.png" />
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculer la moyenne des valeurs par groupe &#39;livre&#39;</span>
 <span class="n">mean_values</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;livre&#39;</span><span class="p">,</span> <span class="s1">&#39;nbr_txts&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;livre&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -742,6 +797,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
 </pre></div>
@@ -752,7 +808,12 @@ document.write(`
 </section>
 <section id="mots-cles">
 <h2>Mots-clés<a class="headerlink" href="#mots-cles" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compter le nombre d&#39;occurrences de chaque valeur de &quot;nbr_kw&quot; et trier par ordre croissant des mots-clés</span>
 <span class="n">counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;nbr_kw&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
@@ -766,11 +827,17 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/a86e045ba2637e66bf43ece9d3167e30d8cd4ff3f6b2c7209d4a9beead6526bc.png" src="_images/a86e045ba2637e66bf43ece9d3167e30d8cd4ff3f6b2c7209d4a9beead6526bc.png" />
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -790,11 +857,17 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/d2f7878da00cbbe20c14263ed84114a7939ce73839e04ad47b04e1cd7ac35a17.png" src="_images/d2f7878da00cbbe20c14263ed84114a7939ce73839e04ad47b04e1cd7ac35a17.png" />
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculer la moyenne des valeurs par groupe &#39;livre&#39;</span>
 <span class="n">mean_values</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;livre&#39;</span><span class="p">,</span> <span class="s1">&#39;nbr_kw&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;livre&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -811,6 +884,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
 </pre></div>
@@ -821,7 +895,12 @@ document.write(`
 </section>
 <section id="commentaires">
 <h2>Commentaires<a class="headerlink" href="#commentaires" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compter le nombre d&#39;occurrences de chaque valeur de &quot;nbr_kw&quot; et trier par ordre croissant des mots-clés</span>
 <span class="n">counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;nbr_coms&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
@@ -835,11 +914,17 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/b6f89f19e898d516513922b78770f6be20095a1c0e806600963a910fb0fa95ba.png" src="_images/b6f89f19e898d516513922b78770f6be20095a1c0e806600963a910fb0fa95ba.png" />
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compter le nombre d&#39;occurrences de chaque valeur de &quot;nbr_coms&quot;</span>
 <span class="n">counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;nbr_coms&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -856,11 +941,17 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/982cfef50ed2047eb641a70cecc287da9730473f1d1dca4c47f48cfeaeddfb67.png" src="_images/982cfef50ed2047eb641a70cecc287da9730473f1d1dca4c47f48cfeaeddfb67.png" />
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculer la moyenne des valeurs par groupe &#39;livre&#39;</span>
 <span class="n">mean_values</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;livre&#39;</span><span class="p">,</span> <span class="s1">&#39;nbr_coms&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;livre&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -877,6 +968,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
 </pre></div>
@@ -887,7 +979,12 @@ document.write(`
 </section>
 <section id="l-ensemble">
 <h2>L’ensemble<a class="headerlink" href="#l-ensemble" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Données </span>
 <span class="n">livres</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
@@ -933,6 +1030,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/1408ec6f08c6a4016b916f0c8d85522b8be1dd5d044466fe088fdc7fd72edb11.png" src="_images/1408ec6f08c6a4016b916f0c8d85522b8be1dd5d044466fe088fdc7fd72edb11.png" />
 </div>
@@ -985,7 +1083,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Seaborn</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
