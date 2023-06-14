@@ -280,7 +280,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -296,6 +298,18 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-d-epigrammes-et-de-textes-par-livre">Nombre d’épigrammes et de textes par livre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-de-textes-mots-cles-commentaires-par-livre">Nombre moyen de textes, mots-clés, commentaires par livre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-textes-par-epigramme-dans-un-livre-donne">Nombre de textes par épigramme dans un livre donné</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-textes-mots-cles-commentaires-par-epigramme-dans-un-livre-donne">Nombre de textes, mots-clés, commentaires par épigramme dans un livre donné</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vers-l-epigramme-parfaite-nombre-groupes-de-mots-cles-par-livre">Vers l’épigramme parfaite : nombre (groupés) de mots-clés par livre</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -307,6 +321,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="seaborn">
 <h1>Seaborn<a class="headerlink" href="#seaborn" title="Permalink to this heading">#</a></h1>
+<p>Seaborn est une librairie de visualisation de données, basée sur <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -622,6 +637,8 @@ document.write(`
 <p>4134 rows × 11 columns</p>
 </div></div></div>
 </div>
+<section id="nombre-d-epigrammes-et-de-textes-par-livre">
+<h2>Nombre d’épigrammes et de textes par livre<a class="headerlink" href="#nombre-d-epigrammes-et-de-textes-par-livre" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -730,6 +747,9 @@ document.write(`
 <img alt="_images/f7094dece2b9eccdcb9d02cccfa4ec4e30dc9c55d46d035c5b0192421438bf50.png" src="_images/f7094dece2b9eccdcb9d02cccfa4ec4e30dc9c55d46d035c5b0192421438bf50.png" />
 </div>
 </div>
+</section>
+<section id="nombre-moyen-de-textes-mots-cles-commentaires-par-livre">
+<h2>Nombre moyen de textes, mots-clés, commentaires par livre<a class="headerlink" href="#nombre-moyen-de-textes-mots-cles-commentaires-par-livre" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -772,6 +792,9 @@ document.write(`
 <img alt="_images/7d7210831d7f81eac3dc7b2da1f18ed5faed8e2ccfbf1d17015494212803cc46.png" src="_images/7d7210831d7f81eac3dc7b2da1f18ed5faed8e2ccfbf1d17015494212803cc46.png" />
 </div>
 </div>
+</section>
+<section id="nombre-de-textes-par-epigramme-dans-un-livre-donne">
+<h2>Nombre de textes par épigramme dans un livre donné<a class="headerlink" href="#nombre-de-textes-par-epigramme-dans-un-livre-donne" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -880,6 +903,9 @@ document.write(`
 <img alt="_images/9a3c2c07a8959c20a6c5a905d5f4c6e03305e48e5561daaa366b631b8c1cd216.png" src="_images/9a3c2c07a8959c20a6c5a905d5f4c6e03305e48e5561daaa366b631b8c1cd216.png" />
 </div>
 </div>
+</section>
+<section id="nombre-de-textes-mots-cles-commentaires-par-epigramme-dans-un-livre-donne">
+<h2>Nombre de textes, mots-clés, commentaires par épigramme dans un livre donné<a class="headerlink" href="#nombre-de-textes-mots-cles-commentaires-par-epigramme-dans-un-livre-donne" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -955,6 +981,368 @@ document.write(`
 </div>
 </div>
 </section>
+<section id="vers-l-epigramme-parfaite-nombre-groupes-de-mots-cles-par-livre">
+<h2>Vers l’épigramme parfaite : nombre (groupés) de mots-clés par livre<a class="headerlink" href="#vers-l-epigramme-parfaite-nombre-groupes-de-mots-cles-par-livre" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meskw</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+    <span class="n">livre_</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;book&#39;</span><span class="p">][</span><span class="s1">&#39;number&#39;</span><span class="p">]</span>
+    <span class="n">count_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;keywords&#39;</span><span class="p">]])</span>
+    <span class="n">url_</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+    <span class="n">meskw</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;book&#39;</span><span class="p">:</span><span class="n">livre_</span><span class="p">,</span><span class="s1">&#39;count&#39;</span><span class="p">:</span><span class="n">count_</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">:</span><span class="n">url_</span><span class="p">})</span>
+<span class="n">meskw_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">meskw</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meskw_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>book</th>
+      <th>count</th>
+      <th>url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>2</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:1.1/</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:1.2/</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>2</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:1.3/</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>2</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:1.4/</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>2</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:1.5/</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>4129</th>
+      <td>16</td>
+      <td>0</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.384/</td>
+    </tr>
+    <tr>
+      <th>4130</th>
+      <td>16</td>
+      <td>0</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.385/</td>
+    </tr>
+    <tr>
+      <th>4131</th>
+      <td>16</td>
+      <td>0</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.386/</td>
+    </tr>
+    <tr>
+      <th>4132</th>
+      <td>16</td>
+      <td>0</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.387/</td>
+    </tr>
+    <tr>
+      <th>4133</th>
+      <td>16</td>
+      <td>0</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.388/</td>
+    </tr>
+  </tbody>
+</table>
+<p>4134 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">data_to_df</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">60</span><span class="p">]</span>
+    <span class="n">mycounts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">],</span> <span class="n">index</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="s2">&quot;2-4&quot;</span><span class="p">,</span><span class="s2">&quot;5-9&quot;</span><span class="p">,</span><span class="s2">&quot;10-59&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="c1"># cut les intervalles du df selon les valeurs de la liste + les compte </span>
+    <span class="n">mondict</span> <span class="o">=</span> <span class="n">mycounts</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+    <span class="n">mondict</span><span class="p">[</span><span class="s1">&#39;book&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;book&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">mondict</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+
+<span class="n">dict_list</span> <span class="o">=</span> <span class="n">meskw_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;book&#39;</span><span class="p">,</span><span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">data_to_df</span><span class="p">)</span>
+<span class="n">dict_list</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>0</th>
+      <th>2-4</th>
+      <th>1</th>
+      <th>5-9</th>
+      <th>10-59</th>
+      <th>book</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <th>0</th>
+      <td>85</td>
+      <td>36</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <th>0</th>
+      <td>10</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <th>0</th>
+      <td>19</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <th>0</th>
+      <td>0</td>
+      <td>80</td>
+      <td>1</td>
+      <td>213</td>
+      <td>16</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <th>0</th>
+      <td>82</td>
+      <td>26</td>
+      <td>127</td>
+      <td>119</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <th>0</th>
+      <td>2</td>
+      <td>23</td>
+      <td>0</td>
+      <td>627</td>
+      <td>106</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <th>0</th>
+      <td>221</td>
+      <td>12</td>
+      <td>9</td>
+      <td>9</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <th>0</th>
+      <td>445</td>
+      <td>160</td>
+      <td>206</td>
+      <td>18</td>
+      <td>2</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <th>0</th>
+      <td>127</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <th>0</th>
+      <td>323</td>
+      <td>12</td>
+      <td>2</td>
+      <td>100</td>
+      <td>6</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <th>0</th>
+      <td>0</td>
+      <td>228</td>
+      <td>1</td>
+      <td>30</td>
+      <td>1</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <th>0</th>
+      <td>29</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <th>0</th>
+      <td>120</td>
+      <td>2</td>
+      <td>29</td>
+      <td>0</td>
+      <td>0</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <th>0</th>
+      <td>49</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <th>0</th>
+      <td>396</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>16</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_df</span> <span class="o">=</span> <span class="n">dict_list</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">count_df</span> <span class="o">=</span> <span class="n">count_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;book&#39;</span><span class="p">)</span> <span class="c1"># définit l&#39;index du df sur book</span>
+<span class="n">count_df_</span> <span class="o">=</span> <span class="n">count_df</span><span class="p">[[</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="s2">&quot;2-4&quot;</span><span class="p">,</span><span class="s2">&quot;5-9&quot;</span><span class="p">,</span><span class="s2">&quot;10-59&quot;</span><span class="p">][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="c1"># met les y dans l&#39;ordre</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;épigrammes qui ont X mots-clés par livre&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">count_df_</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">)</span> <span class="c1"># .T = affiche les étiquettes dans le bon sens ; annot = affiche les valeurs (d=entiers) ; </span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:title={&#39;center&#39;:&quot;Nombre d&#39;épigrammes qui ont X mots-clés par livre&quot;}, xlabel=&#39;book&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/33bfaa343cb001c8ca11dabbf0b58c5bf3c9841a82bf1d09cbf7f5dcfd2fcd11.png" src="_images/33bfaa343cb001c8ca11dabbf0b58c5bf3c9841a82bf1d09cbf7f5dcfd2fcd11.png" />
+</div>
+</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1014,6 +1402,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-d-epigrammes-et-de-textes-par-livre">Nombre d’épigrammes et de textes par livre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-moyen-de-textes-mots-cles-commentaires-par-livre">Nombre moyen de textes, mots-clés, commentaires par livre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-textes-par-epigramme-dans-un-livre-donne">Nombre de textes par épigramme dans un livre donné</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-textes-mots-cles-commentaires-par-epigramme-dans-un-livre-donne">Nombre de textes, mots-clés, commentaires par épigramme dans un livre donné</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vers-l-epigramme-parfaite-nombre-groupes-de-mots-cles-par-livre">Vers l’épigramme parfaite : nombre (groupés) de mots-clés par livre</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
