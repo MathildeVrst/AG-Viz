@@ -1,4 +1,4 @@
-# BUILD : dans AGViz_jb; jupyter-book build synthese-technique/
+# BUILD : dans AGViz_jb; jupyter-book build synthese-technique/; ghp-import -n -p -f _build/html  
 
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
