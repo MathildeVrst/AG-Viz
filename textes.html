@@ -200,6 +200,21 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
+<a href="https://github.com/MathildeVrst/AG-Viz" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
 
 
 
@@ -280,7 +295,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -296,6 +313,18 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-des-librairies-necessaires-et-chargement-des-donnees">Import des librairies nécessaires et chargement des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframisation-des-donnees">Dataframisation des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisation-des-textes">Normalisation des textes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-textes-selon-les-langues">Nombre de textes selon les langues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-caracteres-et-de-mots-par-texte">Nombre de caractères et de mots par texte</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -308,6 +337,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="l-anthologie-comme-recueil-de-textes">
 <h1>L’<em>Anthologie</em> comme recueil de <em>textes</em><a class="headerlink" href="#l-anthologie-comme-recueil-de-textes" title="Permalink to this heading">#</a></h1>
 <p>Avant toute chose, l’Anthologie est un recueil de textes. Commençons donc par nous intéresser à ceux-ci, et à comprendre comment ils se structurent.</p>
+<section id="import-des-librairies-necessaires-et-chargement-des-donnees">
+<h2>Import des librairies nécessaires et chargement des données<a class="headerlink" href="#import-des-librairies-necessaires-et-chargement-des-donnees" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -416,6 +447,9 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+<section id="dataframisation-des-donnees">
+<h2>Dataframisation des données<a class="headerlink" href="#dataframisation-des-donnees" title="Permalink to this heading">#</a></h2>
 <p>Commençons par nous créer un dataframe <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> contenant les valeurs suivantes :</p>
 <ul class="simple">
 <li><p>id de l’épigramme</p></li>
@@ -538,6 +572,9 @@ document.write(`
 </table>
 </div></div></div>
 </div>
+</section>
+<section id="normalisation-des-textes">
+<h2>Normalisation des textes<a class="headerlink" href="#normalisation-des-textes" title="Permalink to this heading">#</a></h2>
 <p>Nous pouvons normaliser quelque peu les textes avant de nous plonger dans une analyse de ceux-ci. Commençons par enlever les sauts de ligne et la ponctuation. La ponctuation pourrait être intéressante pour certaines analyses mais je ne m’y attarderai pas ici.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -568,7 +605,7 @@ document.write(`
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalized</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<span class="n">df</span>
+<span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -601,98 +638,52 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>424</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:1.1/</td>
-      <td>https://anthologiagraeca.org/api/texts/1581/</td>
-      <td>grc</td>
-      <td>ἃς οἱ πλάνοι καθεῖλον ἐνθάδ᾽ εἰκόνας  ἄνακτες ἐστήλωσαν εὐσεβεῖς πάλιν</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>424</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:1.1/</td>
-      <td>https://anthologiagraeca.org/api/texts/1582/</td>
+      <th>2624</th>
+      <td>1576</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:6.317/</td>
+      <td>https://anthologiagraeca.org/api/texts/9455/</td>
       <td>eng</td>
-      <td>inscribed on the tabernacle of saint sophia  the images that the hereties took down here our pious sovereigns replaced</td>
+      <td>praxiteles carved of parian marble danae and   the draped nymphs but me pan he carved of   pentelic marble</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>424</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:1.1/</td>
-      <td>https://anthologiagraeca.org/api/texts/1583/</td>
-      <td>fra</td>
-      <td>sur le dais de l autel de sainte sophie   les images que des égarés avaient renversées ici de pieux souverains les ont relevées</td>
+      <th>9990</th>
+      <td>410</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:12.11/</td>
+      <td>https://anthologiagraeca.org/api/texts/1532/</td>
+      <td>eng</td>
+      <td>yesterday i had philostratus for the night but was incapable though he how shall i say it was quite complaisant no longer my friends count me your friend but throw me off a tower as i have become too much of an astyanax</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>424</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:1.1/</td>
-      <td>https://anthologiagraeca.org/api/texts/1584/</td>
-      <td>por</td>
-      <td>inscrito no altar de santa sofia   daqui os andarilhos derrubaram as imagens então os pios senhores as ergueram novamente</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>438</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:1.2/</td>
-      <td>https://anthologiagraeca.org/api/texts/1627/</td>
+      <th>1840</th>
+      <td>1732</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:6.58/</td>
+      <td>https://anthologiagraeca.org/api/texts/4861/</td>
       <td>grc</td>
-      <td>θεῖος ἰουστῖνος σοφίης πόσις ᾧ πόρε χριστὸς  πάντα διορθοῦσθαι καὶ κλέος ἐν πολέμοις μητρὸς ἀπειρογάμοιο δόμον σκάζοντα νοήσας  σαθρὸν ἀποσκεδάσας τεῦξέ μιν ἀσφαλέως</td>
+      <td>λέκτρα μάτην μίμνοντα καὶ ἄπρηκτον σκέπας εὐνῆς  ἄνθετο σοί μήνη σὸς φίλος ἐνδυμίων  αἰδόμενος πολιὴ γὰρ ὅλου κρατέουσα καρήνου οὐ σῴζει προτέρης ἴχνιον ἀγλαΐης</td>
     </tr>
     <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>11554</th>
-      <td>4125</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.386/</td>
-      <td>https://anthologiagraeca.org/api/texts/14199/</td>
-      <td>ita</td>
-      <td>l artista a morti da gran tempo vita dà   giuliano tira e molla le sue redini  sul carro rosso con vigore come un dì  si leva col suo carro nell immagine  la mano è là che attende il cenno pista via</td>
-    </tr>
-    <tr>
-      <th>11555</th>
-      <td>3523</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.387/</td>
-      <td>https://anthologiagraeca.org/api/texts/6652/</td>
+      <th>11136</th>
+      <td>3889</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:15.49/</td>
+      <td>https://anthologiagraeca.org/api/texts/7019/</td>
       <td>grc</td>
-      <td>ἰουλιανὸς οὗτος ἅρμα ῥουσίου  ἔχων ἐνίκα τοὺς ἐναντίους δρόμῳ  ἀλλ᾽ εἰ γραφεὺς παρεῖχε καὶ πνοῆς χάριν ἕτοιμός ἐστι καὶ πάλιν διφρηλάτης                     καὶ πρόσθεν ἐλθεῖν καὶ λαβεῖν καὶ τὸ στέφος</td>
+      <td>σοὶ καὶ ἀεθλεύοντι μόνῳ λήξαντὶ τ᾽ ἀέθλων τοῦτο γέρας νίκη δὶς πόρεν οὐράνιε  δήμου ἀπ᾽ ἀμφοτέροιο σὺ γὰρ πάρος ἐν βενέτοις μὲν  εἴκοσι κυδίστων στέμμα φέρεις ἐτέων  παύσαο δ᾽ ἱπποσύνης πρασίνων δέ σε δίζετο δῆμος 5  τοῖσδε σὺ μὲν νίκην οἳ δ᾽ ἄρα σοὶ τὸ γέρας</td>
     </tr>
     <tr>
-      <th>11556</th>
-      <td>3523</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.387/</td>
-      <td>https://anthologiagraeca.org/api/texts/14200/</td>
-      <td>ita</td>
-      <td>giuliano è questo per i rossi vincere  poté i rivali tutti nell ippodromo  e se il pittore gl infondeva l alito  sarebbe pronto nuovamente a correre  a dominare la corona a cingere</td>
-    </tr>
-    <tr>
-      <th>11557</th>
-      <td>3946</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.388/</td>
-      <td>https://anthologiagraeca.org/api/texts/7076/</td>
-      <td>grc</td>
-      <td>στέφος πλέκων ποθ᾽ εὗρον ἐν τοῖς ῥόδοις ἔρωτα  καὶ τῶν πτερῶν κατασχὼν  ἐβάπτις1᾽ εἰς τὸν οἶνον                     λαβὼν δ᾽ ἔπιον αὐτόν  καὶ νῦν ἔσω μελῶν μου πτεροῖσι γαργαλίζει</td>
-    </tr>
-    <tr>
-      <th>11558</th>
-      <td>3946</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.388/</td>
-      <td>https://anthologiagraeca.org/api/texts/14201/</td>
-      <td>ita</td>
-      <td>tessevo un serto vidi  di tra le rose amore  lo presi per le ali  lo battezzai nel vino  lo tracannai d un sorso  mi fa con l ali adesso   solletico nel corpo</td>
+      <th>8387</th>
+      <td>2393</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:9.810/</td>
+      <td>https://anthologiagraeca.org/api/texts/7389/</td>
+      <td>eng</td>
+      <td>this is justin next sophia both made the golden  work after their assyrian triumph</td>
     </tr>
   </tbody>
 </table>
-<p>11559 rows × 5 columns</p>
 </div></div></div>
 </div>
+</section>
+<section id="nombre-de-textes-selon-les-langues">
+<h2>Nombre de textes selon les langues<a class="headerlink" href="#nombre-de-textes-selon-les-langues" title="Permalink to this heading">#</a></h2>
 <p>De là, nous pouvons facilement compter le nombre de textes en grec, en anglais, italien, etc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -724,6 +715,9 @@ Name: text_lang, dtype: int64
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;text_lang&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;pie&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>  <span class="c1"># Obtient l&#39;objet de la figure courante</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Distribution des langues des textes de l&#39;AGr&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -733,10 +727,12 @@ Name: text_lang, dtype: int64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &quot;Distribution des langues des textes de l&#39;AGr&quot;)
 </pre></div>
 </div>
-<img alt="_images/5b94903bb49a0cfa7c0062310962b1f3b87de5d18bd04f2aac875762edca51fd.png" src="_images/5b94903bb49a0cfa7c0062310962b1f3b87de5d18bd04f2aac875762edca51fd.png" />
+<img alt="_images/36980ddc420df791901036be8ef854f38fc3a86b058ca6877ba137407a5956b4.png" src="_images/36980ddc420df791901036be8ef854f38fc3a86b058ca6877ba137407a5956b4.png" />
 </div>
 </div>
-<p>Nous pouvons également compter le nombre de caractères et le nombre de mots dans chacun des textes :</p>
+</section>
+<section id="nombre-de-caracteres-et-de-mots-par-texte">
+<h2>Nombre de caractères et de mots par texte<a class="headerlink" href="#nombre-de-caracteres-et-de-mots-par-texte" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -958,6 +954,9 @@ Name: words, dtype: int64
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax1</span> <span class="o">=</span> <span class="n">sum_len</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;pie&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>  <span class="c1"># Obtient l&#39;objet de la figure courante</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Nombre de caractère par langues au sein des textes de l&#39;AGr&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -967,7 +966,7 @@ Name: words, dtype: int64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &quot;Nombre de caractère par langues au sein des textes de l&#39;AGr&quot;)
 </pre></div>
 </div>
-<img alt="_images/abfa882e1f1b9ccc3f61eb3ed3d48d3492a9d5bdeecb62a192843c5fe1d689a6.png" src="_images/abfa882e1f1b9ccc3f61eb3ed3d48d3492a9d5bdeecb62a192843c5fe1d689a6.png" />
+<img alt="_images/5228eb501e49af6bdf14291a1a5f60aa079f7f2037c9d1f3e3cff73e084d3d8e.png" src="_images/5228eb501e49af6bdf14291a1a5f60aa079f7f2037c9d1f3e3cff73e084d3d8e.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -978,6 +977,9 @@ Name: words, dtype: int64
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax1</span> <span class="o">=</span> <span class="n">sum_words</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;pie&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>  <span class="c1"># Obtient l&#39;objet de la figure courante</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Nombre de mots par langues au sein des textes de l&#39;AGr&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -987,7 +989,7 @@ Name: words, dtype: int64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &quot;Nombre de mots par langues au sein des textes de l&#39;AGr&quot;)
 </pre></div>
 </div>
-<img alt="_images/344a6730c80417c16f7557b2eb70c5c9760158341b993227268c62934dba9a92.png" src="_images/344a6730c80417c16f7557b2eb70c5c9760158341b993227268c62934dba9a92.png" />
+<img alt="_images/979d6c96abcf40887f982ed4676df1d5306068de034b7093f84225b029b1e169.png" src="_images/979d6c96abcf40887f982ed4676df1d5306068de034b7093f84225b029b1e169.png" />
 </div>
 </div>
 <p>On pourrait également calculer le nombre moyen de caractères et de mots par épigramme en fonction des langues :</p>
@@ -1036,6 +1038,8 @@ Name: words, dtype: float64
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">mean_len</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>  <span class="c1"># Obtient l&#39;objet de la figure courante</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Nombre moye de caractère par épigramme au sein de l&#39;AGr selon les langues&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1045,7 +1049,7 @@ Name: words, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &quot;Nombre moye de caractère par épigramme au sein de l&#39;AGr selon les langues&quot;)
 </pre></div>
 </div>
-<img alt="_images/c6719f10da6bb99e7ef0f3ef3f7bd001fe18b5c93f52d8d2a902cc69f5281c60.png" src="_images/c6719f10da6bb99e7ef0f3ef3f7bd001fe18b5c93f52d8d2a902cc69f5281c60.png" />
+<img alt="_images/1443d0ec9d19c2a6bce41f23f775239a2354287b41b89953a0381bba7c46eb0c.png" src="_images/1443d0ec9d19c2a6bce41f23f775239a2354287b41b89953a0381bba7c46eb0c.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -1056,18 +1060,21 @@ Name: words, dtype: float64
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">mean_word</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Nombre moye de mots par épigramme au sein de l&#39;AGr selon les langues&quot;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>  <span class="c1"># Obtient l&#39;objet de la figure courante</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> 
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Nombre moyen de mots par épigramme au sein de l&#39;AGr selon les langues&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &quot;Nombre moye de mots par épigramme au sein de l&#39;AGr selon les langues&quot;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &quot;Nombre moyen de mots par épigramme au sein de l&#39;AGr selon les langues&quot;)
 </pre></div>
 </div>
-<img alt="_images/fcaf9b53c80d54de0bf0aca44dd9187e64f16f19f907fe836fb1d60fe5672b3e.png" src="_images/fcaf9b53c80d54de0bf0aca44dd9187e64f16f19f907fe836fb1d60fe5672b3e.png" />
+<img alt="_images/d154ec334f219372d3372a6ca73fe60c1560cc7f7b08a2e3a939ac7655749452.png" src="_images/d154ec334f219372d3372a6ca73fe60c1560cc7f7b08a2e3a939ac7655749452.png" />
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1128,6 +1135,24 @@ Name: words, dtype: float64
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-des-librairies-necessaires-et-chargement-des-donnees">Import des librairies nécessaires et chargement des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframisation-des-donnees">Dataframisation des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisation-des-textes">Normalisation des textes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-textes-selon-les-langues">Nombre de textes selon les langues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-caracteres-et-de-mots-par-texte">Nombre de caractères et de mots par texte</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

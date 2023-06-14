@@ -200,6 +200,21 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
+<a href="https://github.com/MathildeVrst/AG-Viz" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
 
 
 
@@ -448,49 +463,49 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>716</th>
-      <td>1451</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:6.249/</td>
-      <td>6</td>
-      <td>3</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2909</th>
-      <td>3493</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:11.109/</td>
-      <td>11</td>
-      <td>3</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1571</th>
-      <td>1031</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:7.736/</td>
+      <th>1030</th>
+      <td>49</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:7.202/</td>
       <td>7</td>
       <td>5</td>
-      <td>4</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3882</th>
-      <td>3796</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:16.138/</td>
-      <td>16</td>
+      <td>6</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
-      <th>2118</th>
-      <td>2506</td>
-      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:9.275/</td>
+      <th>2093</th>
+      <td>2652</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:9.250/</td>
       <td>9</td>
       <td>1</td>
       <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1300</th>
+      <td>885</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:7.470/</td>
+      <td>7</td>
+      <td>4</td>
+      <td>10</td>
       <td>1</td>
+    </tr>
+    <tr>
+      <th>183</th>
+      <td>329</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:5.26/</td>
+      <td>5</td>
+      <td>5</td>
+      <td>6</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2644</th>
+      <td>2579</td>
+      <td>https://anthologiagraeca.org/api/passages/urn:cts:greekLit:tlg7000.tlg001.ag:9.799/</td>
+      <td>9</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -726,7 +741,8 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;épigrammes qui ont X textes&quot;</span><span class="p">)</span>
-
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -734,7 +750,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/b7b40a25e2bad99bb7dca3024ee1851b3633e4671a35c45a6630863b50e782b9.png" src="_images/b7b40a25e2bad99bb7dca3024ee1851b3633e4671a35c45a6630863b50e782b9.png" />
+<img alt="_images/d56188b3e2b71433cb5240e18e3e937aa1924bbd4407e7af7cd069cd5c7f6bb0.png" src="_images/d56188b3e2b71433cb5240e18e3e937aa1924bbd4407e7af7cd069cd5c7f6bb0.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -761,10 +777,17 @@ document.write(`
 <span class="c1"># Mettre à jour le libellé correspondant à &quot;5&quot;</span>
 <span class="n">counts_grouped</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">counts_grouped</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;5 à 11&#39;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
 
+
 <span class="c1"># Tracer le graphique en secteurs avec les valeurs regroupées</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">counts_grouped</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;pie&#39;</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Pourcentage d&#39;épigramme qui ont X textes&quot;</span><span class="p">)</span>
+
+<span class="c1"># taille</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -772,7 +795,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/dbdcd52cdc6cd7ca2239b378d1df48db8a56f6d6dd9c09c2c4b847c2bb141044.png" src="_images/dbdcd52cdc6cd7ca2239b378d1df48db8a56f6d6dd9c09c2c4b847c2bb141044.png" />
+<img alt="_images/6e37352f2278c8b9675dd53c9990b91aee5cf2a3086d34cfb963ca9bf5890fa2.png" src="_images/6e37352f2278c8b9675dd53c9990b91aee5cf2a3086d34cfb963ca9bf5890fa2.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -793,6 +816,11 @@ document.write(`
 <span class="n">mean_values_ordered</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Moyenne de textes qu&#39;ont les épigrammes de chaque livre&quot;</span><span class="p">)</span>
 
+<span class="c1"># taille</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -802,7 +830,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/d9ebd87e1a5f7ded9a750ad33668fe1b771579f6cd34c8e876a46b8589ae5ab2.png" src="_images/d9ebd87e1a5f7ded9a750ad33668fe1b771579f6cd34c8e876a46b8589ae5ab2.png" />
+<img alt="_images/b8fcac194b30131a592606c9c60ede6adbbaf16a40b97fe29a324d24ee0bb054.png" src="_images/b8fcac194b30131a592606c9c60ede6adbbaf16a40b97fe29a324d24ee0bb054.png" />
 </div>
 </div>
 </section>
@@ -823,13 +851,16 @@ document.write(`
 <span class="n">counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;épigrammes qui ont X mots-clés&quot;</span><span class="p">)</span>
 
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/a86e045ba2637e66bf43ece9d3167e30d8cd4ff3f6b2c7209d4a9beead6526bc.png" src="_images/a86e045ba2637e66bf43ece9d3167e30d8cd4ff3f6b2c7209d4a9beead6526bc.png" />
+<img alt="_images/57ddb356dec7ee553c3bd9a905c93d2e4eb55afc1a9ec4991e74dedf0394b744.png" src="_images/57ddb356dec7ee553c3bd9a905c93d2e4eb55afc1a9ec4991e74dedf0394b744.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -853,13 +884,17 @@ document.write(`
 <span class="n">grouped_counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;pie&#39;</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Pourcentage des épigrammes à avoir X mots-clés&quot;</span><span class="p">)</span>
 
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/d2f7878da00cbbe20c14263ed84114a7939ce73839e04ad47b04e1cd7ac35a17.png" src="_images/d2f7878da00cbbe20c14263ed84114a7939ce73839e04ad47b04e1cd7ac35a17.png" />
+<img alt="_images/c5610a437a7778cd5d38bc1acf17bc7bbc374c4e6ed928936d101e58f5f2f1e0.png" src="_images/c5610a437a7778cd5d38bc1acf17bc7bbc374c4e6ed928936d101e58f5f2f1e0.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -880,6 +915,10 @@ document.write(`
 <span class="n">mean_values_ordered</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Moyenne de mots-clés qu&#39;ont les épigrammes de chaque livre&quot;</span><span class="p">)</span>
 
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -889,7 +928,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/77816a81995bc125680d28b9aa4f4d84aaa426c04dcaa2127d8f09ff0353d6b7.png" src="_images/77816a81995bc125680d28b9aa4f4d84aaa426c04dcaa2127d8f09ff0353d6b7.png" />
+<img alt="_images/1d848e1355f53454e30913a1a01dce9f10cff2f3b213e75789cf81b596c18915.png" src="_images/1d848e1355f53454e30913a1a01dce9f10cff2f3b213e75789cf81b596c18915.png" />
 </div>
 </div>
 </section>
@@ -910,13 +949,17 @@ document.write(`
 <span class="n">counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;épigrammes qui ont X commentaires&quot;</span><span class="p">)</span>
 
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/b6f89f19e898d516513922b78770f6be20095a1c0e806600963a910fb0fa95ba.png" src="_images/b6f89f19e898d516513922b78770f6be20095a1c0e806600963a910fb0fa95ba.png" />
+<img alt="_images/1a336c421a4aeec1e0d922a3455b3b31e1a61b5c9071f6a680a84073399eab18.png" src="_images/1a336c421a4aeec1e0d922a3455b3b31e1a61b5c9071f6a680a84073399eab18.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -937,13 +980,17 @@ document.write(`
 <span class="n">counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;pie&#39;</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Pourcentage d&#39;épigramme qui ont X commentaires&quot;</span><span class="p">)</span>
 
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/982cfef50ed2047eb641a70cecc287da9730473f1d1dca4c47f48cfeaeddfb67.png" src="_images/982cfef50ed2047eb641a70cecc287da9730473f1d1dca4c47f48cfeaeddfb67.png" />
+<img alt="_images/c2b46269d2f248d522ef2ce0d2e291d1e8e7aff6aced9ba29ab8cc23886985dc.png" src="_images/c2b46269d2f248d522ef2ce0d2e291d1e8e7aff6aced9ba29ab8cc23886985dc.png" />
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -964,6 +1011,10 @@ document.write(`
 <span class="n">mean_values_ordered</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Moyenne de commentaires qu&#39;ont les épigrammes de chaque livre&quot;</span><span class="p">)</span>
 
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -973,7 +1024,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/a95bdcf727564b28027b83cafad258de5ae925119a0d741501dc614990b213a6.png" src="_images/a95bdcf727564b28027b83cafad258de5ae925119a0d741501dc614990b213a6.png" />
+<img alt="_images/67239346180939b9af88caea22e85524f6784105256152fb15970e3b585d2439.png" src="_images/67239346180939b9af88caea22e85524f6784105256152fb15970e3b585d2439.png" />
 </div>
 </div>
 </section>
@@ -1025,6 +1076,11 @@ document.write(`
 <span class="c1"># Légende</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 
+<span class="c1"># taille</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+
 <span class="c1"># Afficher le graphique</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -1032,7 +1088,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/1408ec6f08c6a4016b916f0c8d85522b8be1dd5d044466fe088fdc7fd72edb11.png" src="_images/1408ec6f08c6a4016b916f0c8d85522b8be1dd5d044466fe088fdc7fd72edb11.png" />
+<img alt="_images/b73141c850dd64e0a72d4d5dbb37c1426340f0c9e1d7e6449dc7cb84c24d1111.png" src="_images/b73141c850dd64e0a72d4d5dbb37c1426340f0c9e1d7e6449dc7cb84c24d1111.png" />
 </div>
 </div>
 </section>
